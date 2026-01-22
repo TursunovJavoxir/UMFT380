@@ -1,5 +1,16 @@
-def min_of_three(a, b, c):
-    return min(a, b, c)
+class MinNumber:
+    def __init__(self, a: int, b: int, c: int):
+        self.a = a
+        self.b = b
+        self.c = c
 
-a, b, c = map(int, input().split())
-print(min_of_three(a, b, c))
+    def find_min(self) -> int:
+        minimum = self.a
+
+        if self.b < minimum:
+            minimum = self.b
+
+        if self.c < minimum:
+            minimum = self.c
+
+        return minimum
